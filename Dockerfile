@@ -28,7 +28,7 @@ COPY Gemfile.lock /ohana-web-search
 COPY package.json /ohana-web-search
 
 RUN gem install bundler --conservative
-RUN bundle check || bundle install --jobs 20 --retry 5 --without production staging
+RUN bundle check || bundle install --jobs 20 --retry 5
 
 COPY . /ohana-web-search
 
